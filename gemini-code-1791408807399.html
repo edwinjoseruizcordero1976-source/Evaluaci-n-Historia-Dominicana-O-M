@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Interactivo: Historia, Administración y Contabilidad en 1492</title>
+    <style>
+        :root {
+            --primary-color: #002D62;
+            --secondary-color: #CE1126;
+            --accent-color: #F4F6F9;
+            --text-color: #333333;
+            --border-color: #CCCCCC;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 6px solid var(--secondary-color);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 22px;
+        }
+        .header h2 {
+            color: var(--secondary-color);
+            margin: 5px 0 0 0;
+            font-size: 16px;
+        }
+        .timer-box {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .instructions-box {
+            background: #e2e8f0;
+            border-left: 4px solid var(--primary-color);
+            padding: 12px 15px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .question-card {
+            background: var(--accent-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 0 6px 6px 0;
+        }
+        .question-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 15px;
+        }
+        label {
+            display: block;
+            margin: 8px 0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        textarea {
+            height: 70px;
+            resize: vertical;
+        }
+        .btn-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #001f42;
+        }
+        #results {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: #e2e8f0;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>EVALUACIÓN DE APRENDIZAJE: HISTORIA Y NEGOCIOS</h1>
+        <h2>Universidad Dominicana O&M • Metodología de la Investigación</h2>
+    </div>
+
+    <div class="timer-box" id="timerDisplay">
+        ⏱️ Tiempo restante: 25:00 minutos
+    </div>
+
+    <div class="instructions-box">
+        <strong>Instrucciones:</strong> Al hacer clic en <em>"Enviar Evaluación"</em>, se abrirá automáticamente su cliente de correo con el informe completo de sus respuestas y calificación listo para despachar directamente al correo del docente: <strong>edwinjoseruizcordero1976@gmail.com</strong>.
+    </div>
+
+    <form id="quizForm">
+        <!-- DATOS DEL ESTUDIANTE -->
+        <div class="question-card">
+            <h3>Datos Generales</h3>
+            <label for="studentName">Nombre del Estudiante / Grupo:</label>
+            <input type="text" id="studentName" name="studentName" required placeholder="Ingrese sus nombres completos o nombre del grupo">
+        </div>
+
+        <!-- 23 PREGUNTAS DE SELECCIÓN MÚLTIPLE (3 OPCIONES) -->
+        
+        <div class="question-card">
+            <h3>1. ¿Qué evento geopolítico clave en 1453 alteró drásticamente las rutas comerciales de Europa hacia Oriente?</h3>
+            <label><input type="radio" name="q1" value="A"> A) El descubrimiento de América por Cristóbal Colón</label>
+            <label><input type="radio" name="q1" value="B"> B) La caída de Constantinopla ante el Imperio Otomano</label>
+            <label><input type="radio" name="q1" value="C"> C) La firma de las Capitulaciones de Santa Fe</label>
+        </div>
+
+        <div class="question-card">
+            <h3>2. Desde la perspectiva de la administración moderna, el cierre de las rutas terrestres a la India en el siglo XV representó:</h3>
+            <label><input type="radio" name="q2" value="A"> A) Una interrupción crítica de la cadena de suministro (Supply Chain Disruption)</label>
+            <label><input type="radio" name="q2" value="B"> B) Una oportunidad para fundar bancos de inversión</label>
+            <label><input type="radio" name="q2" value="C"> C) El inicio formal de la contabilidad de costos industriales</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. ¿Cuál era el principal problema financiero que sufría Europa occidental antes de 1492?</h3>
+            <label><input type="radio" name="q3" value="A"> A) Exceso masivo de papel moneda sin respaldo</label>
+            <label><input type="radio" name="q3" value="B"> B) Severa escasez de reservas de oro y plata para acuñar monedas</label>
+            <label><input type="radio" name="q3" value="C"> C) Quiebra generalizada de los gremios artesanales</label>
+        </div>
+
+        <div class="question-card">
+            <h3>4. ¿Qué sistema económico y político predominaba en los Estados europeos durante el surgimiento de las expediciones transatlánticas?</h3>
+            <label><input type="radio" name="q4" value="A"> A) El capitalismo industrial moderno</label>
+            <label><input type="radio" name="q4" value="B"> B) El socialismo de Estado</label>
+            <label><input type="radio" name="q4" value="C"> C) El mercantilismo</label>
+        </div>
+
+        <div class="question-card">
+            <h3>5. ¿Cómo se denominó el contrato jurídico-financiero firmado entre Cristóbal Colón y la Corona de Castilla?</h3>
+            <label><input type="radio" name="q5" value="A"> A) Las Leyes de Indias</label>
+            <label><input type="radio" name="q5" value="B"> B) Las Capitulaciones de Santa Fe</label>
+            <label><input type="radio" name="q5" value="C"> C) El Tratado de Tordesillas</label>
+        </div>
+
+        <div class="question-card">
+            <h3>6. Desde el punto de vista de la administración de proyectos, el financiamiento del primer viaje de Colón se asemeja a:</h3>
+            <label><input type="radio" name="q6" value="A"> A) Un contrato de asociación en participación o capital de riesgo (Joint Venture)</label>
+            <label><input type="radio" name="q6" value="B"> B) Un préstamo bancario a tasa fija sin garantías</label>
+            <label><input type="radio" name="q6" value="C"> C) Una subvención gubernamental sin fines de lucro</label>
+        </div>
+
+        <div class="question-card">
+            <h3>7. ¿Cuál era la función principal del control de inventarios de provisiones (agua, vino, bizcocho, pólvora) en las tres carabelas?</h3>
+            <label><input type="radio" name="q7" value="A"> A) Cumplir con los impuestos aduaneros de salida</label>
+            <label><input type="radio" name="q7" value="B"> B) Garantizar la supervivencia de la tripulación y evitar la pérdida total de la inversión</label>
+            <label><input type="radio" name="q7" value="C"> C) Calcular la depreciación de las embarcaciones</label>
+        </div>
+
+        <div class="question-card">
+            <h3>8. ¿Qué institución colonial española fundada en 1503 funcionaba como el órgano central de comercio, aduanas y control migratorio con América?</h3>
+            <label><input type="radio" name="q8" value="A"> A) La Real Audiencia de Santo Domingo</label>
+            <label><input type="radio" name="q8" value="B"> B) El Consejo de Indias</label>
+            <label><input type="radio" name="q8" value="C"> C) La Casa de la Contratación de Sevilla</label>
+        </div>
+
+        <div class="question-card">
+            <h3>9. ¿Cómo se denominaba el impuesto fiscal obligatorio del 20% que la Corona cobraba sobre la extracción de metales preciosos en América?</h3>
+            <label><input type="radio" name="q9" value="A"> A) El Quinto Real</label>
+            <label><input type="radio" name="q9" value="B"> B) El Almojarifazgo</label>
+            <label><input type="radio" name="q9" value="C"> C) La Encomienda</label>
+        </div>
+
+        <div class="question-card">
+            <h3>10. En el ámbito de la contabilidad colonial, la recaudación del Quinto Real exigía el uso riguroso de:</h3>
+            <label><input type="radio" name="q10" value="A"> A) Presupuestos base cero</label>
+            <label><input type="radio" name="q10" value="B"> B) Libros de contabilidad por partida doble y registros en Cajas Reales</label>
+            <label><input type="radio" name="q10" value="C"> C) Auditorías informáticas automatizadas</label>
+        </div>
+
+        <div class="question-card">
+            <h3>11. ¿Qué rol jugaban los banqueros genoveses en las expediciones españolas del siglo XV?</h3>
+            <label><input type="radio" name="q11" value="A"> A) Proveedores de capital de riesgo y gestores financieros</label>
+            <label><input type="radio" name="q11" value="B"> B) Inspectores de aduanas en el Nuevo Mundo</label>
+            <label><input type="radio" name="q11" value="C"> C) Capitanes de las embarcaciones menores</label>
+        </div>
+
+        <div class="question-card">
+            <h3>12. ¿Cuál era el objetivo económico fundamental de la Corona española al patrocinar los viajes de exploración?</h3>
+            <label><input type="radio" name="q12" value="A"> A) Establecer programas de caridad internacional</label>
+            <label><input type="radio" name="q12" value="B"> B) Acumular metales preciosos y asegurar rutas monopólicas de comercio</label>
+            <label><input type="radio" name="q12" value="C"> C) Promover el libre mercado sin intervención estatal</label>
+        </div>
+
+        <div class="question-card">
+            <h3>13. Desde la perspectiva de la gestión de recursos humanos y liderazgo, ¿a qué se enfrentó Colón en alta mar?</h3>
+            <label><input type="radio" name="q13" value="A"> A) A huelgas sindicales legalmente constituidas</label>
+            <label><input type="radio" name="q13" value="B"> B) A crisis de incertidumbre extrema y riesgos de motín por falta de suministros</label>
+            <label><input type="radio" name="q13" value="C"> C) A auditorías laborales externas</label>
+        </div>
+
+        <div class="question-card">
+            <h3>14. ¿Qué implicaba el sistema de la Encomienda desde el punto de vista de la administración de mano de obra?</h3>
+            <label><input type="radio" name="q14" value="A"> A) Un contrato salarial con beneficios marginales y seguridad social</label>
+            <label><input type="radio" name="q14" value="B"> B) La asignación de indígenas a españoles para su cristianización a cambio de trabajo obligatorio</label>
+            <label><input type="radio" name="q14" value="C"> C) Una cooperativa de producción agrícola autogestionada</label>
+        </div>
+
+        <div class="question-card">
+            <h3>15. ¿Cómo afectaba la distancia transatlántica a los procesos administrativos de control en los primeros años coloniales?</h3>
+            <label><input type="radio" name="q15" value="A"> A) Permitia la toma de decisiones instantánea mediante internet</label>
+            <label><input type="radio" name="q15" value="B"> B) Generaba altos tiempos de latencia logística, exigiendo delegación de autoridad y supervisión mediante visitadores</label>
+            <label><input type="radio" name="q15" value="C"> C) Eliminaba por completo la necesidad de registros contables</label>
+        </div>
+
+        <div class="question-card">
+            <h3>16. ¿Qué relación existía entre la unificación de España en 1492 (Toma de Granada) y la aprobación del viaje de Colón?</h3>
+            <label><input type="radio" name="q16" value="A"> A) La Corona quedó sin recursos y necesitó buscar inversiones externas de inmediato</label>
+            <label><input type="radio" name="q16" value="B"> B) Concluyó la guerra interna, liberando capacidad financiera y política para un proyecto de expansión comercial</label>
+            <label><input type="radio" name="q16" value="C"> C) Se prohibió formalmente toda actividad comercial marítima</label>
+        </div>
+
+        <div class="question-card">
+            <h3>17. ¿Qué concepto contable moderno se relaciona directamente con el cálculo de los costos de flete, vituallas y salarios en la Empresa de Indias?</h3>
+            <label><input type="radio" name="q17" value="A"> A) Contabilidad de Costos y Presupuestación de Proyectos</label>
+            <label><input type="radio" name="q17" value="B"> B) Depreciación acumulada de activos intangibles</label>
+            <label><input type="radio" name="q17" value="C"> C) Estados financieros consolidados de multinacionales</label>
+        </div>
+
+        <div class="question-card">
+            <h3>18. ¿Por qué se considera que el mercantilismo colonial operaba bajo un esquema de monopolio comercial estricto?</h3>
+            <label><input type="radio" name="q18" value="A"> A) Porque cualquier país europeo podía comerciar libremente con las Antillas</label>
+            <label><input type="radio" name="q18" value="B"> B) Porque las colonias solo podían comerciar legalmente con la metrópoli a través de puertos autorizados</label>
+            <label><input type="radio" name="q18" value="C"> C) Porque no existían impuestos aduaneros ni regulaciones fiscales</label>
+        </div>
+
+        <div class="question-card">
+            <h3>19. En la administración pública colonial, ¿cuál era la función principal de los "visitadores" o inspectores reales?</h3>
+            <label><input type="radio" name="q19" value="A"> A) Auditar el manejo fiscal y el cumplimiento de las normativas de la Corona en los territorios</label>
+            <label><input type="radio" name="q19" value="B"> B) Diseñar las rutas de navegación para los siguientes viajes</label>
+            <label><input type="radio" name="q19" value="C"> C) Impartir clases de contabilidad básica a los colonos</label>
+        </div>
+
+        <div class="question-card">
+            <h3>20. ¿Qué impacto económico generó la llegada masiva de metales preciosos americanos a la economía europea del siglo XVI?</h3>
+            <label><input type="radio" name="q20" value="A"> A) Estabilidad de precios y deflation generalizada</label>
+            <label><input type="radio" name="q20" value="B"> B) Inflación generalizada conocida como la "Revolución de los Precios"</label>
+            <label><input type="radio" name="q20" value="C"> C) Eliminación total de la pobreza en la península ibérica</label>
+        </div>
+
+        <div class="question-card">
+            <h3>21. ¿Cómo se gestionaba el riesgo financiero ante la alta probabilidad de naufragio o pérdida de una flota mercante?</h3>
+            <label><input type="radio" name="q21" value="A"> A) Mediante contratos de seguros marítimos primitivos y diversificación de inversores</label>
+            <label><input type="radio" name="q21" value="B"> B) Asumiendo la pérdida como gasto deducible de impuestos futuros</label>
+            <label><input type="radio" name="q21" value="C"> C) Suspendiendo temporalmente las leyes comerciales</label>
+        </div>
+
+        <div class="question-card">
+            <h3>22. ¿Qué similitud existe entre la planificación de una expedición marítima en 1492 y la gestión logística de una empresa moderna de comercio internacional?</h3>
+            <label><input type="radio" name="q22" value="A"> A) Ambas requieren previsión de inventarios, gestión de riesgos, presupuestos y control de tiempos</label>
+            <label><input type="radio" name="q22" value="B"> B) Ninguna requiere control financiero ni supervisión de personal</label>
+            <label><input type="radio" name="q22" value="C"> C) Ambas operan bajo la premisa de costos cero</label>
+        </div>
+
+        <div class="question-card">
+            <h3>23. ¿Por qué el estudio de la historia económica y colonial es fundamental para los estudiantes de administración y contabilidad?</h3>
+            <label><input type="radio" name="q23" value="A"> A) Para comprender el origen histórico de los controles fiscales, la auditoría y la gestión de proyectos complejos</label>
+            <label><input type="radio" name="q23" value="B"> B) Únicamente para memorizar fechas y nombres de personajes históricos</label>
+            <label><input type="radio" name="q23" value="C"> C) Para calcular planillas salariales del siglo XVI</label>
+        </div>
+
+        <!-- 2 PREGUNTAS DE RESPUESTAS CORTAS -->
+
+        <div class="question-card">
+            <h3>24. Pregunta de Respuesta Corta: Explique brevemente cómo la interrupción de la Ruta de la Seda en 1453 afectó la estrategia comercial de los reinos europeos y qué relación guarda con la gestión de suministros actual.</h3>
+            <textarea id="q24" name="q24" placeholder="Escriba su respuesta aquí..."></textarea>
+        </div>
+
+        <div class="question-card">
+            <h3>25. Pregunta de Respuesta Corta: Desde la perspectiva contable y fiscal, ¿cuál era la importancia del 'Quinto Real' en el sistema administrativo de la Corona española en América?</h3>
+            <textarea id="q25" name="q25" placeholder="Escriba su respuesta aquí..."></textarea>
+        </div>
+
+        <!-- BOTÓN DE ENVÍO -->
+        <div class="btn-group">
+            <button type="button" onclick="enviarEvaluacionPorCorreo()">📤 Enviar Evaluación al Correo del Docente</button>
+        </div>
+
+        <div id="results"></div>
+    </form>
+</div>
+
+<script>
+    // Temporizador de 25 minutos
+    let tiempoRestante = 25 * 60; // 25 minutos en segundos
+    const timerDisplay = document.getElementById("timerDisplay");
+
+    const cuentaRegresiva = setInterval(function() {
+        let minutos = Math.floor(tiempoRestante / 60);
+        let segundos = tiempoRestante % 60;
+
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+
+        timerDisplay.textContent = `⏱️ Tiempo restante: ${minutos}:${segundos} minutos`;
+
+        if (tiempoRestante <= 0) {
+            clearInterval(cuentaRegresiva);
+            alert("¡El tiempo de los 25 minutos ha concluido!");
+            enviarEvaluacionPorCorreo();
+        }
+        tiempoRestante--;
+    }, 1000);
+
+    function enviarEvaluacionPorCorreo() {
+        clearInterval(cuentaRegresiva);
+        const studentName = document.getElementById("studentName").value.trim();
+        if(!studentName) {
+            alert("Por favor, ingrese su nombre o el nombre del grupo antes de enviar.");
+            document.getElementById("studentName").focus();
+            return;
+        }
+
+        // Respuestas correctas para opción múltiple (1 al 23)
+        const respuestasCorrectas = {
+            q1: "B", q2: "A", q3: "B", q4: "C", q5: "B",
+            q6: "A", q7: "B", q8: "C", q9: "A", q10: "B",
+            q11: "A", q12: "B", q13: "B", q14: "B", q15: "B",
+            q16: "B", q17: "A", q18: "B", q19: "A", q20: "B",
+            q21: "A", q22: "A", q23: "A"
+        };
+
+        let respuestasDetalladas = "";
+        let puntajeOpciones = 0;
+
+        for (let i = 1; i <= 23; i++) {
+            const key = "q" + i;
+            const seleccionada = document.querySelector(`input[name="${key}"]:checked`);
+            const valSel = seleccionada ? seleccionada.value : "Sin responder";
+            const esCorrecta = seleccionada && seleccionada.value === respuestasCorrectas[key];
+            if (esCorrecta) puntajeOpciones++;
+            respuestasDetalladas += `P${i}: ${valSel} ${esCorrecta ? '(Correcta)' : '(Incorrecta)'}\n`;
+        }
+
+        const q24 = document.getElementById("q24").value.trim() || "Sin responder";
+        const q25 = document.getElementById("q25").value.trim() || "Sin responder";
+        let puntajeCortas = 0;
+        if(q24.length > 10) puntajeCortas++;
+        if(q25.length > 10) puntajeCortas++;
+
+        const notaFinal = Math.round(((puntajeOpciones + puntajeCortas) / 25) * 100);
+
+        // Construir enlace mailto hacia el correo del docente con la Z corregida
+        const emailDocente = "edwinjoseruizcordero1976@gmail.com";
+        const asunto = encodeURIComponent(`Evaluación Completada - ${studentName}`);
+        const cuerpoMensaje = encodeURIComponent(
+            `Saludos profesor Edwin Ruiz,\n\n` +
+            `El estudiante / grupo "${studentName}" ha completado la evaluación interactiva.\n\n` +
+            `--- RESULTADO GENERAL ---\n` +
+            `• Calificación Estimada: ${notaFinal} / 100 puntos\n` +
+            `• Aciertos en Selección Múltiple: ${puntajeOpciones} / 23\n` +
+            `• Preguntas Cortas Evaluadas: ${puntajeCortas} / 2\n\n` +
+            `--- DETALLE DE RESPUESTAS ---\n` +
+            respuestasDetalladas + `\n` +
+            `Pregunta 24 (Respuesta Corta):\n${q24}\n\n` +
+            `Pregunta 25 (Respuesta Corta):\n${q25}\n\n` +
+            `Enviado desde el Test Interactivo de Metodología de la Investigación.`
+        );
+
+        // Mostrar resultados en pantalla
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.style.display = "block";
+        resultsDiv.innerHTML = `🎉 ¡Evaluación Procesada con Éxito!<br>
+        Estudiante / Grupo: <strong>${studentName}</strong><br>
+        Calificación Estimada: <strong>${notaFinal} / 100 puntos</strong><br><br>
+        <em>Se ha generado el correo listo para enviar. Si no se abrió automáticamente, <a href="mailto:${emailDocente}?subject=${asunto}&body=${cuerpoMensaje}" style="color: #CE1126;">haga clic aquí para enviar su reporte al profesor</a>.</em>`;
+        
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+        // Abrir cliente de correo automáticamente
+        window.location.href = `mailto:${emailDocente}?subject=${asunto}&body=${cuerpoMensaje}`;
+    }
+</script>
+
+</body>
+</html>
